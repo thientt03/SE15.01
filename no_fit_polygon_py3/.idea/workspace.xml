@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ebd20f91-92b7-45f8-9aac-df01c1e75c85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/npf_rectangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dxf_file/E6.dxf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nfp_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/nfp_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_nfp.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_nfp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/point_to_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/input_utls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/input_utls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/nfp_utls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/nfp_utls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/placement_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/placement_worker.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="fbe7c38b-7bc6-4e0f-8204-079564ca1ab3" />
+  <component name="ProjectId" id="1gJ8JwM8nACBYludIqt9vRXtOb3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/toi_uu" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Dropbox\H3D\Server\no_fit_polygon_py3\dxf_file" />
+      <recent name="F:\GitRepo\no_fit_polygon_py3\dxf_file" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test_nfp">
+    <configuration name="input_utls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/input_utls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="npf_rectangle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/npf_rectangle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="point_to_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/point_to_list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_nfp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_nfp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_nfp" />
+        <item itemvalue="Python.npf_rectangle" />
+        <item itemvalue="Python.point_to_list" />
+        <item itemvalue="Python.input_utls" />
+        <item itemvalue="Python.settings" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebd20f91-92b7-45f8-9aac-df01c1e75c85" name="Default Changelist" comment="" />
+      <created>1597821266946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597821266946</updated>
+      <workItem from="1597821268360" duration="307000" />
+      <workItem from="1597821586481" duration="4000" />
+      <workItem from="1597821912399" duration="771000" />
+      <workItem from="1597891450378" duration="80000" />
+      <workItem from="1599111787384" duration="4928000" />
+      <workItem from="1599117947373" duration="8834000" />
+      <workItem from="1599130138158" duration="349000" />
+      <workItem from="1599188652218" duration="12049000" />
+      <workItem from="1599206914527" duration="8215000" />
+      <workItem from="1599279895470" duration="18141000" />
+      <workItem from="1599460894534" duration="4452000" />
+      <workItem from="1599466123596" duration="4558000" />
+      <workItem from="1599470907089" duration="5319000" />
+      <workItem from="1599533701800" duration="279000" />
+      <workItem from="1599538235013" duration="16675000" />
+      <workItem from="1599621894419" duration="16398000" />
+      <workItem from="1599648624093" duration="416000" />
+      <workItem from="1599677094665" duration="288000" />
+      <workItem from="1599678062890" duration="1468000" />
+      <workItem from="1599706832211" duration="17474000" />
+      <workItem from="1599729831042" duration="826000" />
+      <workItem from="1602001294936" duration="5000" />
+      <workItem from="1602063647974" duration="549000" />
+      <workItem from="1602662732459" duration="23000" />
+      <workItem from="1602662769589" duration="64000" />
+      <workItem from="1602747950145" duration="3208000" />
+      <workItem from="1602774147636" duration="599000" />
+      <workItem from="1602775959167" duration="3552000" />
+      <workItem from="1602806226767" duration="541000" />
+      <workItem from="1602807860304" duration="3652000" />
+      <workItem from="1602856331533" duration="632000" />
+      <workItem from="1602892118451" duration="5000" />
+      <workItem from="1602907687310" duration="603000" />
+      <workItem from="1603147395144" duration="199000" />
+      <workItem from="1603170274380" duration="46000" />
+      <workItem from="1604635344226" duration="739000" />
+      <workItem from="1604636104752" duration="270000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2572" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599112032523">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2572" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599112032523" />
+    <state width="1500" height="466" key="DebuggerActiveHint" timestamp="1599728133782">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1500" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599728133782" />
+    <state width="1500" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129276805" />
+    <state x="218" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1604635568202">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="218" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604635568202" />
+    <state x="526" y="193" key="FileChooserDialogImpl" timestamp="1606312221689">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606312221689" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602806233411" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602909578346" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1606312223142">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606312223142" />
+    <state width="1877" height="359" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604636083155" />
+    <state width="1860" height="460" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1606312223141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606312223141" />
+    <state width="1877" height="359" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604636083155" />
+    <state width="1860" height="460" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1606312223141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606312223141" />
+    <state width="1877" height="359" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604636083155" />
+    <state width="1860" height="460" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1606312223142">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606312223142" />
+    <state width="1877" height="359" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604636083155" />
+    <state width="1860" height="460" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1914" height="1006" key="GridCell.Tab.1.bottom" timestamp="1599729811896">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1914" height="1006" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599729811896" />
+    <state width="1860" height="460" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1914" height="1006" key="GridCell.Tab.1.center" timestamp="1599729811896">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1914" height="1006" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599729811896" />
+    <state width="1860" height="460" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1914" height="1006" key="GridCell.Tab.1.left" timestamp="1599729811896">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1914" height="1006" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599729811896" />
+    <state width="1860" height="460" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state width="1914" height="1006" key="GridCell.Tab.1.right" timestamp="1599729811896">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1914" height="1006" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599729811896" />
+    <state width="1860" height="460" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1599129503555" />
+    <state x="790" y="222" key="RollbackChangesDialog" timestamp="1599466676517">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="222" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599466676517" />
+    <state x="328" y="12" key="SettingsEditor" timestamp="1604909281985">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="328" y="12" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604909281985" />
+    <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602776031625" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1599211499701">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599211499701" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604636003960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604636003960" />
+    <state x="1990" y="117" width="1736" height="845" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604636374881">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1990" y="117" width="1736" height="845" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604636374881" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1605855430783">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1605855430783" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1604635400059">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604635400059" />
+    <state x="2587" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602782224109" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599629196639">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599629196639" />
+  </component>
+</project>
