@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="845e060c-c5d4-4345-b13d-c718fb2d73c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/no_fit_polygon_py3/test/npf_rectangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/dxf_file/E6.dxf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/nfp_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/nfp_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/test_nfp.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/test_nfp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/tools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/test/point_to_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/tools/input_utls.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/tools/input_utls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/tools/nfp_utls.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/tools/nfp_utls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_fit_polygon_py3/tools/placement_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/no_fit_polygon_py3/tools/placement_worker.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/no_fit_polygon_py3" />
+  </component>
+  <component name="ProjectId" id="1jtxWzbECpjsBaQLBOlSu83EQHs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/no_fit_polygon_py3" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\ADMIN\Anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="nfp_function" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="no_fit_polygon_py3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\ADMIN\Anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/no_fit_polygon_py3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/no_fit_polygon_py3/nfp_function.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.nfp_function" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="845e060c-c5d4-4345-b13d-c718fb2d73c9" name="Default Changelist" comment="" />
+      <created>1604637224863</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604637224863</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604637378406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604637378406" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1606276897936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606276897936" />
+    <state width="1345" height="176" key="GridCell.Tab.0.bottom" timestamp="1606276899013">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606276899013" />
+    <state width="1345" height="176" key="GridCell.Tab.0.center" timestamp="1606276899013">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606276899013" />
+    <state width="1345" height="176" key="GridCell.Tab.0.left" timestamp="1606276899013">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606276899013" />
+    <state width="1345" height="176" key="GridCell.Tab.0.right" timestamp="1606276899013">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606276899013" />
+    <state x="368" y="0" key="SettingsEditor" timestamp="1604902646373">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="368" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604902646373" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1604898050691">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1604898050691" />
+  </component>
+</project>
