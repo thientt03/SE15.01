@@ -1,3 +1,0 @@
-Polygon3
-dxfgrabber
-pyclipper
