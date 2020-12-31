@@ -25,26 +25,26 @@ class Nester:
            n.run() # runs the nesting
            n.show() # creates a preview (compound) of the results
            """
-        self.container = container  # 承载组件的容器
-        self.shapes = shapes  # 组件信息
-        self.shapes_max_length = 0  # 在一般无限长的布，设计一个布的尺寸
-        self.results = list()  # storage for the different results
-        self.nfp_cache = {}  # 缓存中间计算结果
-        # 遗传算法的参数
+        self.container = container  # Hộp đựng linh kiện mang theo
+        self.shapes = shapes  # Thông tin thành phần
+        self.shapes_max_length = 0  # Nói chung vải có chiều dài vô hạn, hãy thiết kế một khổ vải
+        self.results = list()  # bộ nhớ cho các kết quả khác nhau
+        self.nfp_cache = {}  # Bộ nhớ đệm kết quả tính toán trung gian
+        # Các tham số của thuật toán di truyền
         self.config = {
-            'curveTolerance': 0.3,  # 允许的最大误差转换贝济耶和圆弧线段。在SVG的单位。更小的公差将需要更长的时间来计算
-            'spacing': SPACING,  # 组件间的间隔
-            'rotations': ROTATIONS,  # 旋转的颗粒度，360°的n份，如：4 = [0, 90 ,180, 270]
-            'populationSize': POPULATION_SIZE,  # 基因群数量
-            'mutationRate': MUTA_RATE,  # 变异概率
-            'useHoles': False,  # 是否有洞，暂时都是没有洞
-            'exploreConcave': False,  # 寻找凹面，暂时是否
+            'curveTolerance': 0.3,  # Sai số tối đa cho phép chuyển đổi Béziers và các đoạn cung. Trong các đơn vị SVG. Dung sai nhỏ hơn sẽ mất nhiều thời gian hơn để tính toán
+            'spacing': SPACING,  # Khoảng cách giữa các thành phần
+            'rotations': ROTATIONS,  # Mức độ chi tiết của xoay, n phần 360 °, chẳng hạn như: 4 = [0, 90, 180, 270]
+            'populationSize': POPULATION_SIZE,  # Số nhóm gen
+            'mutationRate': MUTA_RATE,  # Xác suất đột biến
+            'useHoles': False,  # Có lỗ hổng? Hiện tại không có lỗ hổng
+            'exploreConcave': False,  # Tìm kiếm bề mặt lõm, tạm thời liệu
         }
 
-        self.GA = None  # 遗传算法类
-        self.best = None  # 记录最佳结果 / Record the best results
-        self.worker = None  # 根据NFP结果，计算每个图形的转移数据
-        self.container_bounds = None  # 容器的最小包络矩形作为输出图的坐标
+        self.GA = None  # Thuật toán di truyền
+        self.best = None  # Ghi lại kết quả tốt nhất
+        self.worker = None  # Theo kết quả NFP, tính toán dữ liệu truyền của mỗi đồ thị
+        self.container_bounds = None  # Hình chữ nhật đường bao nhỏ nhất của vùng chứa được sử dụng làm tọa độ của biểu đồ đầu ra
 
     def add_objects(self, objects):
         """add_objects(objects): adds polygon objects to the nester"""
@@ -62,7 +62,7 @@ class Nester:
                 'p_id': str(p_id),
                 'points': [{'x': p[0], 'y': p[1]} for p in points],
             }
-            # 确定多边形的线段方向
+            # Xác định hướng đường thẳng của đa giác
             area = nfp_utls.polygon_area(shape['points'])
             if area > 0:
                 shape['points'].reverse()
@@ -71,7 +71,7 @@ class Nester:
             total_area += shape['area']
             self.shapes.append(shape)
 
-        # 如果是一般布，需要这个尺寸
+        # Nếu là vải thông thường, kích thước này là bắt buộc
         self.shapes_max_length = total_area / BIN_HEIGHT * 3
 
     def add_container(self, container):
@@ -100,7 +100,7 @@ class Nester:
 
         self.container['width'] = xbinmax - xbinmin
         self.container['height'] = ybinmax - ybinmin
-        # 最小包络多边形
+        # Đa giác phong bì tối thiểu
         self.container_bounds = nfp_utls.get_polygon_bounds(self.container['points'])
 
     def clear(self):
@@ -420,7 +420,7 @@ def draw_result(shift_data, polygons, bin_polygon, bin_bounds):
     :param bin_bounds:
     :return:
     """
-    # 生产多边形类
+    # Đa giác sản xuất
     shapes = list()
     for polygon in polygons:
         contour = [[p['x'], p['y']] for p in polygon['points']]
@@ -432,23 +432,23 @@ def draw_result(shift_data, polygons, bin_polygon, bin_bounds):
     solution = list()
     rates = list()
     for s_data in shift_data:
-        # 一个循环代表一个容器的排版
+        # Một chu trình biểu thị bố cục của vùng chứa
         tmp_bin = list()
         total_area = 0.0
         for move_step in s_data:
             if move_step['rotation'] != 0:
-                # 坐标原点旋转
+                # Xoay gốc tọa độ
                 shapes[int(move_step['p_id'])].rotate(
                     math.pi / 180 * move_step['rotation'], 0, 0
                 )
-            # 平移
+            # Pan
             shapes[int(move_step['p_id'])].shift(move_step['x'], move_step['y'])
             tmp_bin.append(shapes[int(move_step['p_id'])])
             total_area += shapes[int(move_step['p_id'])].area(0)
-        # 当前排版的利用率
+        # Sử dụng sắp chữ hiện tại
         rates.append(total_area / shape_area)
         solution.append(tmp_bin)
-    # 显示结果
+    # kết quả cho thấy
     draw_polygon(solution, rates, bin_bounds, bin_shape)
 
 
@@ -488,7 +488,7 @@ class genetic_algorithm:
 
     def random_angle(self, shape):
         """
-        随机旋转角度的选取
+        Lựa chọn góc quay ngẫu nhiên
         :param shape:
         :return:
         """
@@ -496,7 +496,7 @@ class genetic_algorithm:
         for i in range(0, self.config['rotations']):
             angle_list.append(i * (360 / self.config['rotations']))
 
-        # 打乱顺序
+        # làm rối thứ tự
         def shuffle_array(data):
             for i in range(len(data) - 1, 0, -1):
                 j = random.randint(0, i)
@@ -505,10 +505,10 @@ class genetic_algorithm:
 
         angle_list = shuffle_array(angle_list)
 
-        # 查看选择后图形是否能放置在里面
+        # Kiểm tra xem đồ họa có thể được đặt bên trong sau khi chọn không
         for angle in angle_list:
             rotate_part = nfp_utls.rotate_polygon(shape[1]['points'], angle)
-            # 是否判断旋转出界,没有出界可以返回旋转角度,rotate 只是尝试去转，没有真正改变图形坐标
+            # Đánh giá xem liệu xoay có nằm ngoài giới hạn hay không, có thể trả lại góc quay nếu không nằm ngoài giới hạn, xoay chỉ cố gắng xoay và không thực sự thay đổi tọa độ đồ họa
             if (
                     rotate_part['width'] < self.bin_bounds['width']
                     and rotate_part['height'] < self.bin_bounds['height']
@@ -546,7 +546,7 @@ class genetic_algorithm:
             # Giao phối thế hệ kế tiếp
             children = self.mate(male, female)
 
-            # 轻微突变
+            # Đột biến nhỏ
             new_population.append(self.mutate(children[0]))
 
             if len(new_population) < self.config['populationSize']:
@@ -604,7 +604,7 @@ class genetic_algorithm:
 
 def minkowski_difference(A, B):
     """
-    两个多边形的相切空间
+    Không gian tiếp tuyến của hai đa giác
     http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Functions/MinkowskiDiff.htm
     :param A:
     :param B:
@@ -641,9 +641,9 @@ def draw_polygon_png(solution, bin_bounds, bin_shape, path=None):
     fig1.suptitle('Polygon packing', fontweight='bold')
     FigureCanvas(fig1)
 
-    i_pic = 1  # 记录图片的索引
+    i_pic = 1  # Ghi lại chỉ số của bức tranh
     for shapes in solution:
-        # 坐标设置
+        # Cài đặt tọa độ
         ax = fig1.add_subplot(num_bin, 1, i_pic, aspect='equal')
         ax.set_title('Num %d bin' % i_pic)
         i_pic += 1
@@ -732,8 +732,8 @@ def content_loop_rate(best, n, loop_time=20):
 
 def set_target_loop(best, nest):
     """
-    把所有图形全部放下就退出
-    :param best: 一个运行结果
+    Đặt tất cả đồ họa xuống và thoát
+    :param best: Một kết quả đang chạy
     :param nest: Nester class
     :return:
     """
@@ -768,8 +768,8 @@ def set_target_loop(best, nest):
                     num_placed = tmp_num_placed
                     total_area = tmp_total_area
                     rate = tmp_rates
-        # 全部图形放下才退出
+        # Tất cả đồ họa bị lỗi trước khi thoát
         if num_placed == len(nest.shapes):
             break
-    # 画图
+    # Đang vẽ
     draw_result(res['placements'], nest.shapes, nest.container, nest.container_bounds)
