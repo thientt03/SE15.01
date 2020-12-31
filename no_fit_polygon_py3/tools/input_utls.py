@@ -5,8 +5,8 @@ import xml.etree.ElementTree as ET
 
 def find_shape_from_dxf(file_name):
     """
-    读取DXF文档，从LINE里面找出多边形
-    :param file_name: 文档路径
+    Đọc tệp DXF và tìm đa giác từ LINE
+    :param file_name: Đường dẫn tài liệu
     :return:
     """
     dxf = dxfgrabber.readfile(file_name)
@@ -15,24 +15,24 @@ def find_shape_from_dxf(file_name):
     for e in dxf.entities:
         if e.dxftype == 'LINE':
             # print (e.start, e.end)
-            # 找封闭的多边形
-            # 线条不按顺序画
+            # Tìm một đa giác đóng
+            # Dòng không được vẽ theo thứ tự
             end_key = '{}x{}'.format(e.end[0], e.end[1])
             star_key = '{}x{}'.format(e.start[0], e.start[1])
             if end_key in new_polygon:
-                # 找到闭合的多边形
+                # Tìm đa giác đã đóng
                 all_shapes.append(new_polygon[end_key])
                 new_polygon.pop(end_key)
                 continue
 
-            # 开始和结束点转换
+            # Chuyển đổi điểm đầu và điểm cuối
             if star_key in new_polygon:
-                # 找到闭合的多边形
+                # Tìm đa giác đã đóng
                 all_shapes.append(new_polygon[star_key])
                 new_polygon.pop(star_key)
                 continue
 
-            # 找连接的点
+            # Tìm điểm kết nối
             has_find = False
             for key, points in new_polygon.items():
                 if points[-1][0] == e.start[0] and points[-1][1] == e.start[1]:
@@ -69,11 +69,11 @@ def find_shape_from_svg(file_name):
 
 def input_polygon(dxf_file):
     """
-    :param dxf_file: 文件地址
-    :param is_class: 返回Polygon 类，或者通用的 list
+    :param dxf_file: Địa chỉ tệp
+    :param is_class: Trả lại lớp Polygon hoặc danh sách chung
     :return:
     """
-    # 从dxf文件中提取数据
+    # Trích xuất dữ liệu từ tệp dxf
     datas = find_shape_from_dxf(dxf_file)
     shapes = list()
 
