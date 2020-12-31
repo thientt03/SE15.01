@@ -34,9 +34,9 @@ fig_height = num_bin * base_height
 fig1 = plt.figure(figsize=(base_width, fig_height))
 fig1.suptitle('Polygon packing', fontweight='bold')
 
-i_pic = 1  # 记录图片的索引
+i_pic = 1  # Ghi lại chỉ số của bức tranh
 
-# 坐标设置
+# Cài đặt tọa độ
 ax = plt.subplot(num_bin, 1, i_pic, aspect='equal')
 ax.set_title('NPF')
 i_pic += 1
