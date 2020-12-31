@@ -2,15 +2,15 @@
 import copy
 import math
 
-TOL = 0.0000001  # 计算过程中误差忽略值
+TOL = 0.0000001  # Lỗi bỏ qua giá trị trong khi tính toán
 
 
 def almost_equal(a, b, tolerance=None):
     """
-    A，B 两点是否约为相同
-    :param a: 坐标
-    :param b: 坐标
-    :param tolerance: 误差值
+    A，B Hai điểm có gần giống nhau không
+    :param a: danh từ: Tọa độ
+    :param b: danh từ: Tọa độ
+    :param tolerance: Sự khác biệt
     :return:
     """
     if tolerance is None:
@@ -36,11 +36,11 @@ def is_rectangle(poly, tolerance=None):
 
 def normalize_vector(v):
     """
-    normalize vector into a unit vector
+    chuẩn hóa vector thành một vector đơn vị
     :return:
     """
     if almost_equal(v['x'] * v['x'] + v['y'] * v['y'], 1):
-        # given vector was already a unit vector
+        # vectơ đã cho đã là một vectơ đơn vị
         return v
     inverse = 1.0 / math.sqrt(v['x'] ** 2 + v['y'] ** 2)
 
@@ -49,13 +49,13 @@ def normalize_vector(v):
 
 def on_segment(A, B, p):
     """
-    returns true if p lies on the line segment defined by AB, but not at any endpoints
+    trả về true nếu p nằm trên đoạn thẳng được xác định bởi AB, nhưng không ở bất kỳ điểm cuối nào
     :param A:
     :param B:
     :param p:
     :return:
     """
-    # vertical line
+    # đường thẳng đứng
     if almost_equal(A['x'], B['x']) and almost_equal(p['x'], A['x']):
         if (
             not almost_equal(p['y'], B['y'])
@@ -66,7 +66,7 @@ def on_segment(A, B, p):
             return True
         else:
             return False
-    # vertical line
+    # đường thẳng đứng
     if almost_equal(A['y'], B['y']) and almost_equal(p['y'], A['y']):
         if (
             not almost_equal(p['x'], B['x'])
@@ -77,7 +77,7 @@ def on_segment(A, B, p):
             return True
         else:
             return False
-    # range check
+    # kiểm tra phạm vi
     if (
         (p['x'] < A['x'] and p['x'] < B['x'])
         or (p['x'] > A['x'] and p['x'] > B['x'])
@@ -86,7 +86,7 @@ def on_segment(A, B, p):
     ):
         return False
 
-    # exclude end points
+    # loại trừ điểm kết thúc
     if (almost_equal(p['x'], A['x']) and almost_equal(p['y'], A['y'])) or (
         almost_equal(p['x'], B['x']) and almost_equal(p['y'], B['y'])
     ):
@@ -167,9 +167,9 @@ def nfp_rectangle(A, B):
 
 def nfp_polygon(A, B, inside=True, search_edges=False):
     """
-    given a static polygon A and a movable polygon B, compute a no fit polygon by orbiting B about A
-    if the inside flag is set, B is orbited inside of A rather than outside
-    if the searchEdges flag is set, all edges of A are explored for NFPs - multiple
+    đã cho một đa giác tĩnh A và một đa giác di động B, tính một đa giác không vừa vặn bằng cách quay quanh B một khoảng A
+    nếu cờ bên trong được đặt, B được quay quanh bên trong A chứ không phải bên ngoài
+    nếu cờ searchEdges được đặt, tất cả các cạnh của A sẽ được khám phá cho NFP - nhiều
     """
     if A is None or len(A['points']) < 3 or B is None or len(B['points']) < 3:
         return None
@@ -196,14 +196,14 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
             max_b_index = i
 
     if not inside:
-        # shift B such that the bottom-most point of B is at the top-most point of A.
-        # This guarantees an initial placement with no intersections
+        # dịch chuyển B sao cho điểm cực đại của B ở điểm cực đại của A.
+        # Điều này đảm bảo vị trí ban đầu không có giao lộ
         start_point = {
             'x': A['points'][min_a_index]['x'] - B['points'][max_b_index]['x'],
             'y': A['points'][min_a_index]['y'] - B['points'][max_b_index]['y'],
         }
     else:
-        #  no reliable heuristic for inside
+        # không có heuristic đáng tin cậy cho bên trong
         start_point = search_start_point(A, B, inside)
 
     NFP_list = list()
@@ -212,7 +212,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
         B['offsetx'] = start_point['x']
         B['offsety'] = start_point['y']
 
-        # maintain a list of touching points/edges
+        # duy trì danh sách các điểm / cạnh chạm
         prevvector = None
         NFP = [
             {
@@ -262,7 +262,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
                     ):
                         touching.append({'type': 2, 'A': i, 'B': nextj})
 
-            # generate translation vectors from touching vertices/edges
+            # tạo vectơ dịch từ chạm đỉnh / cạnh
             vectors = list()
             for i in range(0, len(touching)):
                 vertex_a = {'A': A['points'][touching[i]['A']], 'marked': True}
@@ -274,7 +274,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
                 prev_a = A['points'][prev_a_index]
                 next_a = A['points'][next_a_index]
 
-                # adjacent B vertices
+                # đỉnh B liền kề
                 vertex_b = {'A': B['points'][touching[i]['B']]}
                 prev_b_index = touching[i]['B'] - 1
                 next_b_index = touching[i]['B'] + 1
@@ -361,8 +361,8 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
             for i in range(0, len(vectors)):
                 if vectors[i]['x'] == 0 and vectors[i]['y'] == 0:
                     continue
-                # if this vector points us back to where we came from, ignore it.
-                # ie cross product = 0, dot product < 0
+                # nếu vectơ này hướng chúng ta trở lại nơi chúng ta xuất phát, hãy bỏ qua nó.
+                # tức là sản phẩm chéo = 0, sản phẩm chấm <0
                 if (
                     prevvector
                     and (
@@ -371,7 +371,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
                     )
                     < 0
                 ):
-                    # compare magnitude with unit vectors
+                    # so sánh độ lớn với các vectơ đơn vị
                     vectorlength = math.sqrt(
                         vectors[i]['x'] ** 2 + vectors[i]['y'] ** 2
                     )
@@ -385,7 +385,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
                         'y': prevvector['y'] / prevlength,
                     }
 
-                    # we need to scale down to unit vectors to normalize vector length. Could also just do a tan here
+                    # chúng ta cần giảm tỷ lệ xuống vectơ đơn vị để chuẩn hóa độ dài vectơ. Cũng có thể tắm nắng ở đây
                     if (
                         abs(unitv['y'] * prevunit['x'] - unitv['x'] * prevunit['y'])
                         < 0.0001
@@ -411,7 +411,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
 
             prevvector = translate
 
-            # trim
+            # cắt
             vlength2 = translate['x'] ** 2 + translate['y'] ** 2
             if max_d ** 2 < vlength2 and not almost_equal(max_d ** 2, vlength2):
                 scale = math.sqrt((max_d ** 2) / vlength2)
@@ -422,10 +422,10 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
             referencey += translate['y']
 
             if almost_equal(referencex, startx) and almost_equal(referencey, starty):
-                # we have made a full loop
+                # chúng tôi đã tạo một vòng lặp đầy đủ
                 break
 
-            # if A and B start on a touching horizontal line, the end point may not be the start point
+            # nếu A và B bắt đầu trên một đường ngang chạm nhau, thì điểm cuối có thể không phải là điểm bắt đầu
             looped = False
             if len(NFP) > 0:
                 for i in range(0, len(NFP) - 1):
@@ -436,7 +436,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
                         looped = True
 
             if looped:
-                # we've made a full loop
+                # chúng tôi đã tạo một vòng lặp đầy đủ
                 break
 
             NFP.append({'x': referencex, 'y': referencey})
@@ -449,7 +449,7 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
                 NFP_list.append(NFP)
 
         if not search_edges:
-            # only get outer NFP or first inner NFP
+            # chỉ nhận NFP bên ngoài hoặc NFP bên trong đầu tiên
             break
 
         start_point = search_start_point(A, B, inside, NFP_list)
@@ -459,15 +459,15 @@ def nfp_polygon(A, B, inside=True, search_edges=False):
 
 def search_start_point(A, B, inside=True, NFP=None):
     """
-    searches for an arrangement of A and B such that they do not overlap if an NFP is given,
-    only search for startpoints that have not already been traversed in the given NFP
+    tìm kiếm sự sắp xếp của A và B sao cho chúng không trùng nhau nếu một NFP được đưa ra,
+    chỉ tìm kiếm các điểm bắt đầu chưa được duyệt qua trong NFP đã cho
     :param A:
     :param B:
     :param inside:
     :param NFP:
     :return:
     """
-    # clone arrays
+    # mảng sao chép
     A = copy.deepcopy(A)
     B = copy.deepcopy(B)
 
@@ -478,8 +478,8 @@ def search_start_point(A, B, inside=True, NFP=None):
                 B['offsetx'] = A['points'][i]['x'] - B['points'][j]['x']
                 B['offsety'] = A['points'][i]['y'] - B['points'][j]['y']
 
-                # 判断 A，B 是否一样
-                # 点是否在多边形边上
+                # Xác định xem A và B có giống nhau không
+                # Là điểm trên cạnh của đa giác
                 bin_side = None
                 for k in range(0, len(B['points'])):
                     inpoly = point_in_polygon(
@@ -502,7 +502,7 @@ def search_start_point(A, B, inside=True, NFP=None):
                 ):
                     return start_point
 
-                # slide B along vector
+                # trượt B dọc theo vectơ
                 vx = A['points'][i + 1]['x'] - A['points'][i]['x']
                 vy = A['points'][i + 1]['y'] - A['points'][i]['y']
 
@@ -518,7 +518,7 @@ def search_start_point(A, B, inside=True, NFP=None):
                 elif d1 is not None and d2 is None:
                     d = d1
 
-                # only slide until no longer negative
+                # chỉ trượt cho đến khi không còn âm
                 if not (d is not None and not almost_equal(d, 0) and d > 0):
                     continue
 
@@ -554,7 +554,7 @@ def search_start_point(A, B, inside=True, NFP=None):
 
 def inNfp(p, nfp):
     """
-    returns true if point already exists in the given nfp
+    trả về true nếu điểm đã tồn tại trong nfp đã cho
     :param p:
     :param nfp:
     :return:
@@ -593,10 +593,10 @@ def point_in_polygon(point, polygon):
             return None
 
         if on_segment({'x': xi, 'y': yi}, {'x': xj, 'y': yj}, point):
-            return None  # exactly on the segment
+            return None  # chính xác trên phân khúc
 
         if almost_equal(xi, xj) and almost_equal(yi, yj):
-            # ignore very small lines
+            # bỏ qua những dòng rất nhỏ
             continue
 
         intersect = ((yi > point['y']) != (yj > point['y'])) and (
@@ -644,7 +644,7 @@ def intersect(A, B):
             next_b_index = 0 if j + 1 == len_b - 1 else j + 2
             next_a_index = 0 if i + 1 == len_a - 1 else i + 2
 
-            # go even further back if we happen to hit on a loop end point
+            # quay lại xa hơn nữa nếu chúng ta tình cờ gặp điểm cuối của vòng lặp
             if (
                 B['points'][pre_vb_index] == B['points'][j]
                 or almost_equal(B['points'][pre_vb_index]['x'], B['points'][j]['x'])
@@ -659,7 +659,7 @@ def intersect(A, B):
             ):
                 pre_va_index = len_a - 1 if pre_va_index == 0 else pre_va_index - 1
 
-            # go even further forward if we happen to hit on a loop end point
+            # tiến xa hơn nữa nếu chúng ta tình cờ gặp điểm cuối của vòng lặp
             if (
                 B['points'][next_b_index] == B['points'][j + 1]
                 or almost_equal(B['points'][next_b_index]['x'], B['points'][j + 1]['x'])
@@ -700,7 +700,7 @@ def intersect(A, B):
                 or almost_equal(a1['x'], b1['x'])
                 and almost_equal(a1['y'], b1['y'])
             ):
-                # if a point is on a segment, it could intersect or it could not. Check via the neighboring points
+                # nếu một điểm nằm trên một đoạn, nó có thể cắt nhau hoặc không thể. Kiểm tra qua các điểm lân cận
                 b0in = point_in_polygon(b0, A)
                 b2in = point_in_polygon(b2, A)
                 if (b0in and not b2in) or (not b0in and b2in):
@@ -713,7 +713,7 @@ def intersect(A, B):
                 or almost_equal(a2['x'], b2['x'])
                 and almost_equal(a2['y'], b2['y'])
             ):
-                # if a point is on a segment, it could intersect or it could not.Check via the neighboring points
+                # nếu một điểm nằm trên một đoạn, nó có thể giao nhau hoặc không thể. Kiểm tra qua các điểm lân cận
                 b1in = point_in_polygon(b1, A)
                 b3in = point_in_polygon(b3, A)
                 if (b1in and not b3in) or (not b1in and b3in):
@@ -726,7 +726,7 @@ def intersect(A, B):
                 or almost_equal(a1['x'], b2['x'])
                 and almost_equal(a1['y'], b2['y'])
             ):
-                # if a point is on a segment, it could intersect or it could not.Check via the neighboring points
+                # nếu một điểm nằm trên một đoạn, nó có thể giao nhau hoặc không thể. Kiểm tra qua các điểm lân cận
                 a0in = point_in_polygon(a0, B)
                 a2in = point_in_polygon(a2, B)
                 if (a0in and not a2in) or (not a0in and a2in):
@@ -739,7 +739,7 @@ def intersect(A, B):
                 or almost_equal(a2['x'], b1['x'])
                 and almost_equal(a2['y'], b1['y'])
             ):
-                # if a point is on a segment, it could intersect or it could not.Check via the neighboring points
+                # nếu một điểm nằm trên một đoạn, nó có thể giao nhau hoặc không thể. Kiểm tra qua các điểm lân cận
                 a1in = point_in_polygon(a1, B)
                 a3in = point_in_polygon(a3, B)
                 if (a1in and not a3in) or (not a1in and a3in):
@@ -755,9 +755,9 @@ def intersect(A, B):
 
 def line_intersect(A, B, E, F, infinite=None):
     """
-    returns the intersection of AB and EF, or null if there are no intersections or other numerical error
-    if the infinite flag is set, AE and EF describe infinite lines without endpoints,
-    they are finite line segments otherwise
+    trả về giao điểm của AB và EF hoặc rỗng nếu không có giao điểm hoặc lỗi số khác
+    nếu cờ vô hạn được đặt, AE và EF mô tả các đường vô hạn không có điểm cuối,
+    chúng là các đoạn thẳng hữu hạn nếu không
     :param A:
     :param B:
     :param E:
@@ -814,7 +814,7 @@ def line_intersect(A, B, E, F, infinite=None):
 
 def polygon_projection_distance(A, B, direction):
     """
-    project each point of B onto A in the given direction, and return the distance
+    chiếu từng điểm của B lên A theo hướng đã cho và trả lại khoảng cách
     :param A:
     :param B:
     :param direction:
@@ -835,7 +835,7 @@ def polygon_projection_distance(A, B, direction):
     s1 = dict()
     s2 = dict()
     for i in range(0, len(edge_b)):
-        # the shortest/most negative projection of B onto A
+        # hình chiếu âm nhất / ngắn nhất của B lên A
         min_projection = minp = None
         for j in range(0, len(edge_a) - 1):
             p['x'] = edge_b[i]['x'] + b_offsetx
@@ -854,7 +854,7 @@ def polygon_projection_distance(A, B, direction):
             ):
                 continue
 
-            # project point, ignore edge boundaries
+            # điểm dự án, bỏ qua ranh giới cạnh
             d = point_distance(p, s1, s2, direction)
             if d and (min_projection is None or d < min_projection):
                 min_projection = d
@@ -879,7 +879,7 @@ def point_distance(p, s1, s2, normal, infinite=None):
     s2dotnorm = s2['x'] * normal['x'] + s2['y'] * normal['y']
 
     if infinite is None:
-        # dot doesn't collide with segment, or lies directly on the vertex
+        # chấm không va chạm với phân đoạn hoặc nằm trực tiếp trên đỉnh
         if (
             (pdot < s1dot or almost_equal(pdot, s1dot))
             and (pdot < s2dot or almost_equal(pdot, s2dot))
@@ -976,11 +976,11 @@ def segment_distance(A, B, E, F, direction):
     ef_min = min(dot_e, dot_f)
     ef_max = max(dot_e, dot_f)
 
-    # segments that will touch at one point
+    # phân đoạn sẽ chạm vào một điểm
     if almost_equal(ab_max, ef_min, TOL) or almost_equal(ab_min, ef_max, TOL):
         return None
 
-    # segments miss each other completely
+    # phân đoạn hoàn toàn nhớ nhau
     if ab_max < ef_min or ab_min > ef_max:
         return None
 
@@ -1001,7 +1001,7 @@ def segment_distance(A, B, E, F, direction):
         B['y'] - A['y']
     )
 
-    # lines are colinear
+    # dòng thẳng hàng
     if almost_equal(cross_abe, 0) and almost_equal(cross_abf, 0):
         ab_norm = {'x': B['y'] - A['y'], 'y': A['x'] - B['x']}
         ef_norm = {'x': F['y'] - E['y'], 'y': E['x'] - F['x']}
@@ -1014,13 +1014,13 @@ def segment_distance(A, B, E, F, direction):
         ef_norm['x'] /= ef_norm_length
         ef_norm['y'] /= ef_norm_length
 
-        # segment normals must point in opposite directions
+        # điểm chuẩn của phân đoạn phải hướng theo các hướng ngược nhau
         if abs(ab_norm['y'] * ef_norm['x'] - ab_norm['x'] * ef_norm['y']) < TOL and (
             ab_norm['y'] * ef_norm['y'] + ab_norm['x'] * ef_norm['x'] < 0
         ):
-            # normal of AB segment must point in same direction as given direction vector
+            # pháp tuyến của đoạn AB phải cùng hướng với vectơ chỉ phương cho trước
             norm_dot = ab_norm['y'] * direction['y'] + ab_norm['x'] * direction['x']
-            # the segments merely slide along eachother
+            # các phân đoạn chỉ trượt dọc theo nhau
             if almost_equal(norm_dot, 0, TOL):
                 return None
 
@@ -1031,14 +1031,14 @@ def segment_distance(A, B, E, F, direction):
 
     distances = list()
 
-    # coincident points
+    # điểm trùng hợp
     if almost_equal(dot_a, dot_e):
         distances.append(cross_a - cross_e)
     elif almost_equal(dot_a, dot_f):
         distances.append(cross_a - cross_f)
     elif ef_min < dot_a and dot_a < ef_max:
         d = point_distance(A, E, F, reverse)
-        # A currently touches EF, but AB is moving away from EF
+        # A hiện đang chạm EF, nhưng AB đang rời xa EF
         if d and almost_equal(d, 0):
             db = point_distance(B, E, F, reverse, True)
             if db < 0 or almost_equal(db * overlap, 0):
@@ -1122,7 +1122,7 @@ def rotate_polygon(polygon, angle):
 
 
 def get_polygon_bounds(polygon):
-    # 最小包络矩阵
+    # Ma trận phong bì tối thiểu
     if polygon is None or len(polygon) < 3:
         return None
 
