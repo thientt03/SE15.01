@@ -14,18 +14,18 @@ if __name__ == '__main__':
         BIN_NORMAL[2][0] = n.shapes_max_length
         BIN_NORMAL[3][0] = n.shapes_max_length
 
-    # 选择面布
+    # Chọn vải mặt
     n.add_container(BIN_NORMAL)
-    # 运行计算
+    # Chạy tính toán
     n.run()
 
-    # 设计退出条件
+    # Điều kiện thoát thiết kế
     res_list = list()
     best = n.best
-    # 放置在一个容器里面
+    # Đặt trong một thùng chứa
     # Placed in a container
     # set_target_loop(best, n)    # T6
 
-    # 循环特定次数
+    # Chu kỳ một số lần cụ thể
     # Cycle a certain number of times
     content_loop_rate(best, n, loop_time=20)  # T7 , T4
