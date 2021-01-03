@@ -1,6 +1,6 @@
 # SE15.01
 # GOALS
-Xem xét thuật toán áp dụng trong thực tế ván cắt lát công nghiệp. Mục tiêu cố gắng tiết kiệm chi phí nhất có thể để tạo lời lớn nhất cho bên sản xuất. Thực hiện các thuật toán liên quan đánh giá khả năng sử dụng cũng như hoạt động vào thực tế
+Thực hiện thuật toán áp dụng trong thực tế ván cắt lát công nghiệp. Mục tiêu cố gắng tiết kiệm chi phí nhất có thể để tạo lời lớn nhất cho bên sản xuất. Thực hiện các thuật toán liên quan đánh giá khả năng sử dụng cũng như hoạt động vào thực tế
 
 # Nesting là gì ??
 Chúng tôi muốn gói tất cả các chữ cái thành hình vuông, sử dụng ít vật liệu nhất có thể. Nếu một hình vuông duy nhất là không đủ, chúng tôi cũng muốn giảm thiểu số lượng hình vuông được sử dụng.
