@@ -126,7 +126,7 @@ class Nester:
         # and still identify the original face, so we can calculate a transform afterwards
         faces = list()
 
-        # Tính toán các h ình cùng với offset của nó, đầu ra sẽ được sử dụng làm placement
+        # Tính toán các hình cùng với offset của nó, đầu ra sẽ được sử dụng làm placement
         for i in range(0, len(self.shapes)):
             shape = copy.deepcopy(self.shapes[i])
             shape['points'] = self.polygon_offset(
@@ -158,7 +158,7 @@ class Nester:
         else:
             self.GA.generation()
 
-        # Tính fitness của mỗi cá thể
+        # Tính fitness của mỗi cá thể trong di truyền
         for i in range(0, self.GA.config['populationSize']):
             res = self.find_fitness(self.GA.population[i])
             self.GA.population[i]['fitness'] = res['fitness']
