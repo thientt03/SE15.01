@@ -25,7 +25,7 @@ class Nester:
            n.show() # creates a preview (compound) of the results
            """
         self.container = container  # Hộp đựng linh kiện mang theo
-        self.shapes = shapes  # Thông tin thành phần
+        self.shapes = shapes  # Thông tin thành phần các phần khối
         self.shapes_max_length = 0  # Nói chung vải có chiều dài vô hạn, hãy thiết kế một khổ vải
         self.results = list()  # bộ nhớ cho các kết quả khác nhau
         self.nfp_cache = {}  # Bộ nhớ đệm kết quả tính toán trung gian
