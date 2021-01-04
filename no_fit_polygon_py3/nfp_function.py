@@ -26,7 +26,7 @@ class Nester:
            """
         self.container = container  # Hộp đựng linh kiện mang theo
         self.shapes = shapes  # Thông tin thành phần các phần khối
-        self.shapes_max_length = 0  # Nói chung vải có chiều dài vô hạn, hãy thiết kế một khổ vải
+        self.shapes_max_length = 0  # Nói chung vải có chiều dài vô hạn, hãy thiết kế một khổ vải đã xác định kích thước
         self.results = list()  # bộ nhớ cho các kết quả khác nhau
         self.nfp_cache = {}  # Bộ nhớ đệm kết quả tính toán trung gian
         # Các tham số của thuật toán di truyền
