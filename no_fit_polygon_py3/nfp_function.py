@@ -12,7 +12,6 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 from settings import SPACING, ROTATIONS, BIN_HEIGHT, POPULATION_SIZE, MUTA_RATE
 
-
 class Nester:
     def __init__(self, container=None, shapes=None):
         """Nester([container,shapes]): Creates a nester object with a container
@@ -52,7 +51,7 @@ class Nester:
             objects = [objects]
         if not self.shapes:
             self.shapes = []
-
+            
         p_id = 0
         total_area = 0
         for obj in objects:
