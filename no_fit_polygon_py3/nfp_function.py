@@ -41,7 +41,7 @@ class Nester:
         }
 
         self.GA = None  # Thuật toán di truyền Genetic Algorithms
-        self.best = None  # Ghi lại kết quả tốt nhất
+        self.best = None  # Ghi lại kết quả tốt nhất trong di truyền
         self.worker = None  # Theo kết quả NFP, tính toán dữ liệu truyền của mỗi đồ thị
         self.container_bounds = None  # Hình chữ nhật đường bao nhỏ nhất của vùng chứa được sử dụng làm tọa độ của biểu đồ đầu ra
 
